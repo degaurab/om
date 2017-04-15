@@ -121,6 +121,7 @@ func main() {
 	commandSet["revert-staged-changes"] = commands.NewRevertStagedChanges(dashboardService, stdout)
 	commandSet["upload-stemcell"] = commands.NewUploadStemcell(form, uploadStemcellService, diagnosticService, stdout)
 	commandSet["upload-product"] = commands.NewUploadProduct(form, extractor, availableProductsService, stdout)
+	commandSet["delete-products"] = commands.NewDeleteProducts(availableProductsService, stdout)
 	commandSet["delete-unused-products"] = commands.NewDeleteUnusedProducts(availableProductsService, stdout)
 	commandSet["stage-product"] = commands.NewStageProduct(stagedProductsService, availableProductsService, diagnosticService, stdout)
 	commandSet["configure-product"] = commands.NewConfigureProduct(stagedProductsService, jobsService, stdout)
